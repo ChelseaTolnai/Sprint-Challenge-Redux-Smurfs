@@ -7,7 +7,6 @@ import {
 const initialState = {
    smurfs: [],
    fetchingSmurfs: false,
-   fetchedSmurf: false,
   //  addingSmurf: false,
   //  updatingSmurf: false,
   //  deletingSmurf: false,
@@ -19,23 +18,22 @@ function reducer (state = initialState , action) {
     case FETCHING_SMURFS:
       return {
         ...state,
-        fetchingFriends: true,
-        fetchedSmurf: false,
+        smurfs: [],
+        fetchingSmurfs: true,
         error: null,
       }
     case FETCHING_SMURFS_SUCCESSFUL:
       return {
         ...state,
         smurfs: action.payload,
-        fetchingFriends: false,
-        fetchedSmurf: true,
+        fetchingSmurfs: false,
         error: null,
       }
     case FETCHING_SMURFS_FAILED:
       return {
         ...state,
-        fetchingFriends: false,
-        fetchedSmurf: false,
+        smurfs: [],
+        fetchingSmurfs: false,
         error: action.payload,
       }
     default:
