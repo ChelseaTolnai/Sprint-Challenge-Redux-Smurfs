@@ -34,7 +34,9 @@ class SmurfForm extends Component {
         return (
             <div className="SmurfForm">
                 <Form onSubmit={this.addSmurf} id="smurfForm">
+                {this.props.updatingSmurf ? null :
                 <FormText>Please fill in all fields to add a Smurf</FormText>
+                }
                 <FormGroup row>
                     <Label for="name" sm={2}>Name</Label>
                     <Col sm={10}>
@@ -76,7 +78,10 @@ class SmurfForm extends Component {
                 </FormGroup>
                 <FormGroup check row>
                     <Col sm={{ size: 10, offset: 1 }}>
-                    <Button type="submit">Add to the village</Button>
+                    {this.props.updatingSmurf 
+                    ? <Button>Update Smurf</Button>
+                    : <Button type="submit">Add to the village</Button>
+                    }
                     </Col>
                 </FormGroup>
                 </Form>

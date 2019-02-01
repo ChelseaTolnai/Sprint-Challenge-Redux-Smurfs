@@ -37,7 +37,11 @@ h1 {
 label {
   font-weight: bold;
   color: white;
-  text-decoration: underline;
+  text-shadow:
+  -2px -2px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
   padding-right: 2%;
 }
 
@@ -45,6 +49,11 @@ label {
   font-weight: bold;
   font-size: 1.2em;
   color: white!important;
+  text-shadow:
+  -2px -2px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 }
 
 .btn-secondary {
