@@ -22,19 +22,15 @@ h1 {
 }
 
 /* Form */
-h3 {
-  font-size: 2em;
-}
-
 .SmurfForm {
   margin-top: 4%;
 }
 
 .form-group, .form-check {
-  width: 50%;
-  margin: 2% auto;
+  width: 70%;
+  margin: 1% auto;
   padding: 2%;
-  background-color: ##88CCFF;
+  background-color: #88CCFF;
   border-radius: 10px;
 }
 
@@ -42,6 +38,13 @@ label {
   font-weight: bold;
   color: white;
   text-decoration: underline;
+  padding-right: 2%;
+}
+
+.text-muted {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white!important;
 }
 
 .btn-secondary {
@@ -72,11 +75,5 @@ h4 {
   width: 300px;
   padding: 4% 2%;
   background-color: #88CCFF;
-}
-
-/* Link Buttons */
-.btn-primary {
-  margin: 5% 0;
-  width: 80%;
-  font-size: 2em;
+  margin: 2% 0;
 }

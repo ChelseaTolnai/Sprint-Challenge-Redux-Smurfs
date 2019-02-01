@@ -4,6 +4,10 @@ export const FETCHING_SMURFS = "FETCHING_SMURFS";
 export const FETCHING_SMURFS_SUCCESSFUL = "FETCHING_SMURFS_SUCCESSFUL";
 export const FETCHING_SMURFS_FAILED = "FETCHING_SMURFS_SUCCESSFUL";
 
+export const ADDING_SMURF = "ADDING_SMURF";
+export const ADDING_SMURF_SUCCESSFUL = "ADDING_SMURF_SUCCESSFUL";
+export const ADDING_SMURF_FAILED = "ADDING_SMURF_SUCCESSFUL";
+
 /*
   For this project you'll need at least 2 action creators for the main portion,
    and 2 more for the stretch problem.
@@ -21,4 +25,12 @@ export const getSmurfs = () => dispatch => {
     .get("http://localhost:3333/smurfs")
     .then(res => dispatch({ type: FETCHING_SMURFS_SUCCESSFUL, payload: res.data }))
     .catch(err => dispatch({ type: FETCHING_SMURFS_FAILED, payload: err }));
+};
+
+export const addSmurf = smurf => dispatch => {
+  dispatch({ type: ADDING_SMURF });
+  axios
+    .post("http://localhost:3333/smurfs", smurf)
+    .then(res => dispatch({ type: ADDING_SMURF_SUCCESSFUL, payload: res.data }))
+    .catch(err => dispatch({ type: ADDING_SMURF_FAILED, payload: err }));
 };
